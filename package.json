@@ -3,9 +3,11 @@
   "version": "1.0.0",
   "description": "Vanilla starter for 1ofx.net",
   "scripts": {
-    "start": "parcel index.html"
+    "start": "parcel index.html",
+    "build": "shx rm -rf ./dist && parcel build index.html --public-url ./ && zip -r package.zip dist"
   },
   "dependencies": {
-    "parcel": "^2.0.1"
+    "parcel": "^2.0.1",
+    "shx": "^0.3.3"
   }
 }

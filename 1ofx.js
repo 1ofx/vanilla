@@ -19,7 +19,11 @@ window.OneOfX = {
   realRandom,
   tokenId,
   tokenIndex: params.get("tokenIndex") || (Math.random() * 100).toFixed(0),
+  features: null,
+  saved: false,
   save: function (props) {
+    if (props) this.features = props;
+    this.saved = true;
     console.log("Properties:", props);
     this.save = () => {};
   },
